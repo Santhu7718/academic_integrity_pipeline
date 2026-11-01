@@ -1,0 +1,23 @@
+pipeline:
+  name: "academic_integrity_workflow"
+  version: "1.0.0"
+  fixed_seed: 20261022  # Explicitly requested in the prompt
+
+scale:
+  submissions: 10000
+  flags: 1000
+  cases: 300
+
+prefixes:
+  submission: "SUB-2026-"
+  integrity_rule: "INT-2026-"
+  
+paths:
+  output_dir: "data/output"
+  ground_truth_dir: "data/ground_truth"
+
+edge_cases:
+  - "Flag automatically treated as guilt"
+  - "Reviewer has conflict"
+  - "Evidence added after decision without history"
+  - "Appeal closed without independent review"
