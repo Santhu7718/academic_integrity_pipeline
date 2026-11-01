@@ -1,14 +1,20 @@
-# Academic Integrity & Appeals Workflow (Synthetic Data Pipeline)
+# 🎓 Academic Integrity & Appeals Workflow: Synthetic Data Pipeline
 
-## 📌 Objective
-A relational synthetic data generator and validation pipeline modeling an academic integrity workflow. It generates 10 linked entities handling submissions, automated similarity flags, manual reviews, evidence gathering, and appeals.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Pandas](https://img.shields.io/badge/Pandas-2.2.1-green)
+![Status](https://img.shields.io/badge/Status-Validation_Passed-brightgreen)
 
-## ⚙️ Reproducibility & Generation
-To satisfy Step 10, this data is strictly reproducible. It utilizes a fixed random seed (`20261022`) defined in `config/pipeline_config.yaml`. Running the generator twice will produce the exact same row counts and checksums.
+## 📌 Business Context & Objective
+This project implements an end-to-end synthetic data generation and validation pipeline for an **Academic Integrity and Appeals Workflow**. 
 
+The system models the lifecycle of academic submissions, automated similarity flagging, manual investigations, evidence gathering, adjudications, and independent appeals. It is designed to generate deterministic, relationally sound data while deliberately injecting targeted edge cases to test downstream analytical systems.
+
+## 🚀 Quick Start & Reproducibility
+
+This pipeline guarantees **100% reproducibility**. By utilizing a fixed random seed (`20261022`), executing the generator multiple times will yield the exact same row counts, checksums, and edge cases.
+
+### 1. Setup Environment
 ```bash
-# Generate the data (10k submissions, 1k flags, 300 cases)
-python src/generator.py
-
-# Run the integrity validator
-python src/validator.py
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
