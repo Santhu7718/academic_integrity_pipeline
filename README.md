@@ -93,7 +93,7 @@ In completing this assignment, I utilized AI (Google Gemini) as a productivity a
 1. **Prompt 1 (Data Generation Boilerplate):** *"I have designed a relational schema for an Academic Integrity workflow with 10 tables: Learner, Assessment, Submission, SimilarityReport, IntegrityRule, Case, EvidenceItem, Reviewer, Decision, Appeal. Write a Python script using Faker and Pandas to generate synthetic data for these. Enforce specific ID formats like SUB-2026-000001 and SIM-<submission-id>-01."*
 2. **Prompt 2 (Edge Case Injection):** *"Update the python generator to inject 4 specific edge cases: Flag automatically treated as guilt, Reviewer has conflict, Evidence added after decision without history, Appeal closed without independent review. Ensure these anomaly IDs are exported to a separate ground_truth.csv file."*
 3. **Prompt 3 (Validation Logic):** *"Write a validation script in Python using pandas that loads the 10 CSVs and checks for Primary Key uniqueness, Foreign Key integrity (no orphan records), and ensures that decision dates occur strictly after case opened dates."*
-4. **Prompt 4 (Documentation):** *"Format my schema definitions and edge case logic into a professional Markdown README and Data Dictionary."*
+
 
 ---
 
